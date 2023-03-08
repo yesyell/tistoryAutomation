@@ -1,10 +1,10 @@
 import requests
 
-client_id = '064a3904aec17d0514ef9d397739ae8a'
-client_secret = '064a3904aec17d0514ef9d397739ae8abe7fc658c44c2cc397987e5802db0f1fda979e1b'
-access_token = '558264390fb3e65c9a98384f9e27da64_6a0ae60c844f29a595642b2861262e86'
-redirect_uri = 'http://devskills.tistory.com'
-blogName = 'devskills'
+client_id = 'App ID'
+client_secret = 'Secret Key'
+access_token = 'access token'
+redirect_uri = '블로그 주소'
+blogName = '블로그 이름 (https://XXX.tistory.com 에서 XXX의 값)'
 # tag = 'Developer, Coding'  # 등록할 태그값, 쉼표로 구분
 output = 'json'  # 고정값
 grant_type = 'authorization_code'  # 고정값
@@ -34,8 +34,6 @@ def get_category():
     }
     r = requests.get(url, data)
     return r.text
-
-
 
 
 def post_write(title, content, tag, image_url=None):
